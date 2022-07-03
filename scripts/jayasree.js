@@ -30,8 +30,6 @@ function onLoad(){
         $('#getMonthYear').append(_option)
     })
 
-    
-
 }
 
 
@@ -43,12 +41,12 @@ function printReceipt(){
     var amount = $('#getAmount').val();
     var paymode = $('#getPayMode').val();
 
-if(flatNoName != '' && forMonth != '') {
+if(flatNoName != undefined && forMonth != 'Select') {
     $('#date').html(date);
     $('#flatNo').html(flatNo);
     $('#flatNoName').html(flatNoName);
     $('#forMonth').html(forMonth);
-    $('#amount').html('₹ ' + amount);
+    $('#amount').html('&#8377 ' + amount);
     $('#payMode').html(paymode);
 }
 else{
