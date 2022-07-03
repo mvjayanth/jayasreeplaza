@@ -1,0 +1,117 @@
+ <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Jayasree Plaza - Maintenance Receipt</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+        <link href="css/style.css" rel="stylesheet">
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script src="scripts/jayasree.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+                <!----------------------------- 
+                        FORM CONTENT
+                ------------------------------>
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">Flat No/Name</label>
+                    <select class="form-select" id="getFlatNo">
+                        <option value="">Select</option>
+                      </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Month/Year</label>
+                    <select class="form-select" id="getMonthYear">
+                        <option value="">Select</option>
+                      </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="" class="form-label">Amount</label>
+                    <input type="number" class="form-control" value="1200" id="getAmount">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="" class="form-label">Payment Mode</label>
+                    <select class="form-select" id="getPayMode">
+                        <option value="Cash" selected>Cash</option>
+                        <option value="Online">Online</option>
+                      </select>
+
+                  </div>
+            
+
+                  <div class="footer align-right" id="footer">
+                    <button class="btn btn-primary" id="printReceipt">PRINT</button>
+                    <button class="btn btn-default">CLEAR</button>
+                  </div>
+            
+                </form>
+
+                <!----------------------------- 
+                        PRINT CONTENT
+                ------------------------------>
+                <div id="printBody" class="printBody">
+                    <h3 class="text-center">Maintenance Reciept
+                        <small class="text-muted d-block">JAYASREE PLAZA OWNERS WELFARE ASSOCIATION</small>
+                    </h3>
+                    <hr>
+
+                    <div class="printRows">
+                        <div class="row text-end">
+                            <div class="col-sm-12">Date: <span class="printText" id="date"></span></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12"><p>Received with thanks from </p></div>
+                            <div class="col-sm-12">
+                                Mr/Mrs: 
+                                <span class="printText fs-3" id="flatNoName"></span>
+                                Flat No:
+                                <span class="printText fs-3" id="flatNo"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                The sum of Rupees: <span class="printText fs-3" id="amount"></span>
+                                For Month/Year of: <span class="printText fs-3" id="forMonth"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                Payment Mode: <span class="printText fs-3" id="payMode"></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <hr>
+                    <div class="row  text-end">
+                        <div class="col-sm-12">
+                            Received By: <span class="printText">M Viswa Jayanth</span>
+                        </div>
+                        <small class="text-muted fst-italic">This is an electronically generated receipt, no signature is required.</small>
+                    </div>
+                </div>
+        </div>
+
+<script>
+    $(document).ready(function() {
+        onLoad();
+    });
+
+    $('#printReceipt').click(function(){
+        printReceipt();
+    })
+
+</script>
+
+    </body>
+ </html>

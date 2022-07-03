@@ -1,0 +1,26 @@
+
+
+#printBody{
+    display: none;
+}
+
+@media print {
+    form {
+        display: none;
+    }
+    #printBody{
+        display: block;
+    }
+    .printBody{
+        padding: 30px;
+        border: 1px solid #000;
+    }
+    .printText{
+        font-weight: bold;
+        padding: 0 15px;
+        text-decoration: underline;
+    }
+    .u{
+        text-decoration: underline;
+    }
+}
