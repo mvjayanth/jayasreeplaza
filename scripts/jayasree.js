@@ -54,7 +54,6 @@ else{
     return
 }
 
-
     window.print();
 
 }
