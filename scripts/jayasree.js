@@ -34,6 +34,7 @@ function onLoad(){
 
 
 function printReceipt(){
+    debugger
     var date = new Date().toLocaleDateString();
     var flatNo = $('#getFlatNo').val();
     var flatNoName = $('#getFlatNo option:selected').text().split(',')[1];
@@ -42,7 +43,7 @@ function printReceipt(){
     var paymode = $('#getPayMode').val();
 
 if(flatNoName != undefined && forMonth != 'Select') {
-    $('title').html('Receipt-' + flatNo + "-" + forMonth + new Date().getFullYear());
+    $('title').html('Receipt-' + flatNo + "-" + forMonth);
     $('#date').html(date);
     $('#flatNo').html(flatNo);
     $('#flatNoName').html(flatNoName);
