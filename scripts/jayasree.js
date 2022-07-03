@@ -42,7 +42,7 @@ function printReceipt(){
     var paymode = $('#getPayMode').val();
 
 if(flatNoName != undefined && forMonth != 'Select') {
-    $('#title').html(flatNo + "-" + forMonth + new Date().getFullYear());
+    $('title').html('Receipt-' + flatNo + "-" + forMonth + new Date().getFullYear());
     $('#date').html(date);
     $('#flatNo').html(flatNo);
     $('#flatNoName').html(flatNoName);
